@@ -44,7 +44,7 @@ import { useState,useEffect } from 'react'
 
 export default function HookuseState() {
   const [mode,setMode] = useState(false)
-  const [color,setColor] = useState('')
+  const [color,setColor] = useState('blue')
 
   useEffect(() => {
     const changeBackground = () => {
@@ -55,9 +55,11 @@ export default function HookuseState() {
   })
 
   const handleClick = () => {
+    // si mode es false lo paso a true y cambio el color a azul
     if(!mode){
       setMode(true)
-      setColor('blue')
+      setColor('#5D5D5D')
+    // si modo es true, paso el modo a false y vacio el color
     }else{
       setMode(false)
       setColor('')
@@ -69,6 +71,7 @@ export default function HookuseState() {
     <div>
     Hook useState
     </div>
+    {/* si modo es true muestrame el valor lightmode, si es false muestrame darkmode */}
     <button type = "button" onClick={handleClick}>{mode ? 'lightmode' : 'darkmode'}</button>
     </>
   )
