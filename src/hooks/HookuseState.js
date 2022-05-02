@@ -44,7 +44,7 @@ import { useState,useEffect } from 'react'
 
 export default function HookuseState() {
   const [mode,setMode] = useState(false)
-  const [color,setColor] = useState('blue')
+  const [color,setColor] = useState('')
 
   useEffect(() => {
     const changeBackground = () => {
