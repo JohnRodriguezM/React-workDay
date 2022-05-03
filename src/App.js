@@ -8,9 +8,14 @@ import PokeApi from './components/PokeApi';
 // hooks en react
 import HookuseState from './hooks/HookuseState';
 import HuseEffect from './hooks/HuseEffect';
+import HuseContext from './hooks/HuseContext';
+
+// se importa el ThemeProvider
+import Context from './contexto/ThemeContext'
 
 export default function App() {
   return (
+   <Context.Provider value = 'black' >
     <div className="App">
       <Reloj />
       <hr />
@@ -26,8 +31,13 @@ export default function App() {
       <hr />
       <hr />
       <HuseEffect  />
+      <hr />
+      <br />
+      <HuseContext/>
+      <br />
+      <br />
     </div>
-
+    </Context.Provider> 
   );
 }
 

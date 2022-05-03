@@ -6,7 +6,7 @@ const getData = async (setEstadoPersonajes) => {
     setEstadoPersonajes(data.results)
   }
   catch (err) {
-    console.error(err);
+    alert(err);
   }
 }
 

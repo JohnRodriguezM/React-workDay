@@ -1,50 +1,13 @@
 
 import { useState,useEffect } from 'react'
 
-/* export default function HookuseState() {
-  const [color, setColor] = useState('blue')
-  const [background, setBackground] = useState(false)
-
-  useEffect(()=> { 
-    console.log('fase')
-    const darkMode = () => {
-      if(background){
-        document.body.style.filter = 'invert(1)'
-      }else{
-        document.body.style.filter = '';
-      }
-    }
-    window.addEventListener('click', darkMode)
-  },[background])
-
-
-  const handleCheck = (e) => {
-    if(e.target.checked){
-      setColor('red')//
-      console.log('soy checked')
-      setBackground(false)
-    }else{
-      console.log('no soy checked')
-      setColor('green')//
-      setBackground(true)
-    }
-  }
-
-  return (
-    <>
-      <div style={{
-        color: color || null
-      }}>H-useState
-      </div>
-      <input type ='checkbox' onClick={handleCheck}/>
-    </>
-  )
-} */
+// se importa el ThemeContext para el useContext
 
 
 export default function HookuseState() {
   const [mode,setMode] = useState(false)
   const [color,setColor] = useState('')
+
 
   useEffect(() => {
     const changeBackground = () => {

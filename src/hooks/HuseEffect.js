@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+
 import { v4 as uuidv4 } from 'uuid';
 import '../styles/Tarjetas.css'
 import {
@@ -29,8 +30,8 @@ export default function HuseEffect() {
   },[])
 
   return (
-    <div>
-      Uso del hook useEffect
+    <div >
+    <h4> Uso del hook useEffect</h4>
       <div>
         <ol className="container-tarjeta">
           {
