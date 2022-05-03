@@ -8,30 +8,25 @@ import {
 // se diseñan tarjetas
 
 
+// se importa funcion helper para hacer el fetch
+import getData from '../helpers/getData'
+
 export default function HuseEffect() {
   // se declara la varibale de estado para definir personaje y para actulizar estado
   const [personajes, setPersonajes] = useState([])
 
   // se declara la funcion que va a ser usada dentro de useEffect
-
-  const getData = async () => {
-    let url = 'https://rickandmortyapi.com/api/character/'
-    const response = await fetch(url)
-    const data = await response.json()
-    console.log(data)
-    setPersonajes(data.results)
-  }
   // uso de useEffect
   useEffect(() => {
     // se suscribe al evento
     // montaje
-    window.addEventListener('load', getData)
+    window.addEventListener('load', () =>  getData(setPersonajes))
     return () => {
       // desmontaje
       // se desuscribe al evento
-      window.removeEventListener('load', getData)
+      window.removeEventListener('load', () => getData(setPersonajes))
     }
-  }, [])
+  },[])
 
   return (
     <div>

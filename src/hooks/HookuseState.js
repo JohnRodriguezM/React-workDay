@@ -50,9 +50,10 @@ export default function HookuseState() {
     const changeBackground = () => {
     document.body.style.backgroundColor = color
     }
+    console.log('hola');
     window.addEventListener('click', changeBackground)
     return()=> window.removeEventListener('click', changeBackground)
-  })
+  },[color])
 
   const handleClick = () => {
     // si mode es false lo paso a true y cambio el color a azul
