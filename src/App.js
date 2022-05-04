@@ -13,6 +13,10 @@ import HuseContext from './hooks/HuseContext';
 // se importa el ThemeProvider
 import Context from './contexto/ThemeContext'
 
+
+// se crea un customHook
+import UsoUseFetch from './mirchaRe/customHook/UsoUseFetch';
+
 export default function App() {
   return (
    <Context.Provider value = 'black' >
@@ -34,6 +38,11 @@ export default function App() {
       <hr />
       <br />
       <HuseContext/>
+      <br />
+      <br />
+      <UsoUseFetch />
+      <br />
+      <br />
       <br />
       <br />
     </div>
