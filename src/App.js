@@ -17,6 +17,9 @@ import Context from './contexto/ThemeContext'
 // se crea un customHook
 import UsoUseFetch from './mirchaRe/customHook/UsoUseFetch';
 
+// otros modulos
+import Referencias from './mirchaRe/referencias/Referencias'
+
 export default function App() {
   return (
    <Context.Provider value = 'black' >
@@ -43,6 +46,8 @@ export default function App() {
       <UsoUseFetch />
       <br />
       <br />
+      <hr />
+      <Referencias />
       <br />
       <br />
     </div>
