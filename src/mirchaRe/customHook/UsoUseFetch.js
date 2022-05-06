@@ -10,9 +10,9 @@ let {data,isPending,error} = useFetch(url)
     <h3>{JSON.stringify(isPending)}</h3>
     <h3><mark>{JSON.stringify(error)}</mark></h3>
     <h3>
-    {data.map(el => {
+    {data.map((el,i) => {
         return (
-            <li>{el.name}</li>
+            <li key = {i}>{el.name}</li>
         )
     })} 
     </h3>

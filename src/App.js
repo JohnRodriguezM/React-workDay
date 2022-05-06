@@ -18,40 +18,62 @@ import Context from './contexto/ThemeContext'
 import UsoUseFetch from './mirchaRe/customHook/UsoUseFetch';
 
 // otros modulos
-import Referencias from './mirchaRe/referencias/Referencias'
+import Referencias from './mirchaRe/referencias/Referencias';
+// formularios
+import Form from './mirchaRe/formularios/Form';
+import { SeconForm, SecondFormMejora } from './mirchaRe/formularios/SecondForm';
 
+// explicacion sobre estilos en react
+import Estilos1 from './mirchaRe/estilosEnReacts/estilos1'
 export default function App() {
   return (
-   <Context.Provider value = 'black' >
-    <div className="App">
-      <Reloj />
-      <hr />
-      <hr />
-      <Api />
-      <hr />
-      <hr />
-      <PokeApi />
-      <hr />
-      <hr />
-      {/* hooks en react a profundidad */}
-      <HookuseState />
-      <hr />
-      <hr />
-      <HuseEffect  />
-      <hr />
-      <br />
-      <HuseContext/>
-      <br />
-      <br />
-      <UsoUseFetch />
-      <br />
-      <br />
-      <hr />
-      <Referencias />
-      <br />
-      <br />
-    </div>
-    </Context.Provider> 
+    <Context.Provider value='black' >
+      <div className="App">
+        <Reloj />
+        <hr />
+        <hr />
+        <Api />
+        <hr />
+        <hr />
+        <PokeApi />
+        <hr />
+        <hr />
+        {/* hooks en react a profundidad */}
+        <HookuseState />
+        <hr />
+        <hr />
+        <HuseEffect />
+        <hr />
+        <br />
+        <HuseContext />
+        <br />
+        <br />
+        <UsoUseFetch />
+        <br />
+        <br />
+        <hr />
+        <Referencias />
+        <br />
+        <br />
+        <hr />
+        <Form />
+        <br />
+        <br />
+        <hr />
+        <SeconForm />
+        <br />
+        <br />
+        <SecondFormMejora />
+        <br />
+        <br />
+        <hr />
+        <Estilos1/>
+        <br />
+        <br />
+        <br />
+        <br />
+      </div>
+    </Context.Provider>
   );
 }
 
